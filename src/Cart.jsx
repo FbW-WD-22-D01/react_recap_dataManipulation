@@ -118,19 +118,14 @@ function removeItem(id){
 
 
 useEffect(() => {
-    //  const myTotalResult = cart.reduce( (acc, curr, index) => {
-    //             console.log('Acc: ', acc, 'Curent Value: ', curr)        
-    //             acc += curr.price * curr.amount
-    //             return acc
-    //         },0 )
+     const myTotalResult = cart.reduce( (acc, curr, index) => {
+                console.log('Acc: ', acc, 'Curent Value: ', curr)        
+                acc += curr.price * curr.amount
+                return acc
+            },0 )
     
-    let result = 0
-    cart.map( (el, index, arr) => {
-        result += el.price*el.amount
-        
-    })
-    console.log(result)
-    // setTotal(myTotalResult)
+
+    setTotal(myTotalResult)
 }, [cart])
 
 
